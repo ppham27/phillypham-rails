@@ -1,44 +1,46 @@
-== Welcome to Rails
+= phillypham.com
 
-Rails is a web-application framework that includes everything needed to create
-database-backed web applications according to the Model-View-Control pattern.
+This is my personal website, link:phillypham.com.
 
-This pattern splits the view (also called the presentation) into "dumb"
-templates that are primarily responsible for inserting pre-built data in between
-HTML tags. The model contains the "smart" domain objects (such as Account,
-Product, Person, Post) that holds all the business logic and knows how to
-persist themselves to a database. The controller handles the incoming requests
-(such as Save New Account, Update Product, Show Post) by manipulating the model
-and directing data to the view.
+== Getting Started Developing
 
-In Rails, the model is handled by what's called an object-relational mapping
-layer entitled Active Record. This layer allows you to present the data from
-database rows as objects and embellish these data objects with business logic
-methods. You can read more about Active Record in
-link:files/vendor/rails/activerecord/README.html.
+=== On OS X, >= 10.7:
+1. At the command prompt, install Homebrew:
+       $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
-The controller and view are handled by the Action Pack, which handles both
-layers by its two parts: Action View and Action Controller. These two layers
-are bundled in a single package due to their heavy interdependence. This is
-unlike the relationship between the Active Record and Action Pack that is much
-more separate. Each of these packages can be used independently outside of
-Rails. You can read more about Action Pack in
-link:files/vendor/rails/actionpack/README.html.
+2. Edit /etc/paths/ by putting /usr/local/bin at the very top.
 
+3. Install rvm:
+       $ \curl -L https://get.rvm.io | bash -s stable --autolibs=3 --rails
+       
+4. Install Postgresql:
+       $ brew install postgresql
 
-== Getting Started
+5. Initalize a data directory for Postgresql:
+       $ initdb /usr/local/var/postgres -E utf8
 
-1. At the command prompt, create a new Rails application:
-       <tt>rails new myapp</tt> (where <tt>myapp</tt> is the application name)
+6. Create aliases in .bash_profile:
+       alias pgstart="pg_ctl -D /usr/local/var/postgres -l logfile start"
+       alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
 
-2. Change directory to <tt>myapp</tt> and start the web server:
-       <tt>cd myapp; rails server</tt> (run with --help for options)
+7. Restart terminal:
+       $ pgstart
+       $ psql postgres
+       postgres=# create role phillypham with createdb login;
+       postgres=# \q
 
-3. Go to http://localhost:3000/ and you'll see:
-       "Welcome aboard: You're riding Ruby on Rails!"
+8. Install gems:
+       $ gem install haml rspec pg unicorn
 
-4. Follow the guidelines to start developing your application. You can find
-the following resources handy:
+9. Clone git repo:
+       $ https://github.com/ppham27/phillypham.git && cd phillypham
+
+10. Install gems and create database:
+       $ bundle install
+       $ rake db:create:all
+       
+11. Done. Test by running local server!
+       $ rails server
 
 * The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
 * Ruby on Rails Tutorial Book: http://www.railstutorial.org/
