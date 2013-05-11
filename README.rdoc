@@ -1,6 +1,6 @@
 = phillypham.com
 
-This is my personal website, link:phillypham.com.
+This is my personal website, link:http://phillypham.com.
 
 == Getting Started Developing
 
