@@ -29,17 +29,14 @@ This is my personal website, link:http://phillypham.com.
        postgres=# create role phillypham with createdb login;
        postgres=# \q
 
-8. Install gems:
-       $ gem install haml rspec pg unicorn
-
-9. Clone git repo:
+8. Clone git repo:
        $ https://github.com/ppham27/phillypham.git && cd phillypham
 
-10. Install gems and create database:
+9. Install gems and create database:
        $ bundle install
        $ rake db:create:all
        
-11. Done. Test by running local server!
+10. Done. Test by running local server!
        $ rails server
 
 * The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html

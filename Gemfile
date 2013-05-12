@@ -10,9 +10,11 @@ gem 'pg'
 gem 'unicorn'
 
 gem 'haml'
+gem 'haml-rails'
 
 group :development, :test do
-  gem 'rspec'  
+  gem 'rspec'
+  gem 'rspec-rails'
 end  
 
 # Gems used only for assets and not required
@@ -30,7 +32,8 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'authlogic'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
