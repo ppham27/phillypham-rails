@@ -1,5 +1,8 @@
 class AddUserToPost < ActiveRecord::Migration
   def change
-    add_column :posts, :user_id
+    change_table :posts do |t|
+      t.belongs_to :user
+      t.index :user_id
+    end
   end
 end

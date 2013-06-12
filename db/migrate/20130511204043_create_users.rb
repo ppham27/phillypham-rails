@@ -1,6 +1,8 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
+      t.string :name, null: false
+      
       # required fields for authlogic
       t.string :email, null: false
       t.string :persistence_token, null: false

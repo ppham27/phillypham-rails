@@ -9,6 +9,9 @@
 %p
   %b Content:
   = raw(@post.content)
+%p
+  %b Author:
+  = User.find(@post.user_id).name
 
 = link_to 'Edit', edit_post_path(@post)
 \|
