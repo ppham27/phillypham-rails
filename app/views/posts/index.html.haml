@@ -1,28 +1,17 @@
 %p#notice= notice
 
-%h1 Thoughts
+%h1 A place to ponder
 
-%table
-  %tr
-    %th Title
-    %th Subtitle
-    %th Content
-    %th Author
-    %th
-    %th
-    %th
-
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= post.subtitle
-      %td= post.content
-      %td= User.find(post.user_id).name
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+- @posts.each do |post|  
+  = render 'post', post: post
+  - if current_user
+    = link_to 'Show', post
+    \|
+    = link_to 'Edit', edit_post_path(post)
+    \|
+    = link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Post', new_post_path
-
+- if current_user
+  = link_to 'New Post', new_post_path

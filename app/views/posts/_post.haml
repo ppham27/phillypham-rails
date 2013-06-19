@@ -1,0 +1,15 @@
+.post
+  %h2.title= link_to post.title, post 
+    
+  %h3.subtitle= post.subtitle
+  
+  .content
+    = render inline: post.content, type: 'erb'
+
+  %span.author
+    By
+    = User.find(post.user_id).name
+  \|
+  %span.time
+    Posted at
+    = post.created_at.to_formatted_s :long
