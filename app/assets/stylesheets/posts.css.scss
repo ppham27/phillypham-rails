@@ -4,10 +4,18 @@
 
 #blog-title {
   color: #355e3b;
+  font-size: 24pt;
 }
 
 .post {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  .title {
+    font-size: 18pt;
+  }
+  
   .subtitle {
+    font-size: 14pt;
     color: #355e3b;
   }
 }
