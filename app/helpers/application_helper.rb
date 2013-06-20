@@ -12,5 +12,5 @@ module ApplicationHelper
     options[:width] = options[:width] || '200'
     options[:send] = options[:send] || 'true'
     content_tag 'div', "", class: 'fb-like', data: options
-  end
+  end  
 end
