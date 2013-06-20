@@ -1,16 +1,15 @@
 body {
-  padding: 50px 50px 0px 100px;
+  padding: 10px 50px 0px 100px;
   background-color: #ffffff;
   color: #444;
   font-family: HelveticaNeue, sans-serif;
-  font-size: 13px;
+  font-size: 11pt;
   line-height: 18px;
+  min-width: 800px;
 }
 
 p, ol, ul, td {
   font-family: HelveticaNeue, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
 }
 
 pre {
