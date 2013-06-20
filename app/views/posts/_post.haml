@@ -13,3 +13,6 @@
   %span.time
     Posted at
     = post.created_at.to_formatted_s :long_american
+  %br
+  = facebook_button href: post_url(post)  
+  = tweet_button url: post_url(post), text: "Look at what Phil Pham thinks at"

@@ -6,7 +6,6 @@ module ApplicationHelper
   end
 
   def facebook_button(options = {})
-    # options[:class] = 'fb-like'
     options[:href] = options[:href] || request.url
     options[:layout] = options[:layout] || 'button_count'
     options[:width] = options[:width] || '200'
