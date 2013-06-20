@@ -12,6 +12,8 @@ gem 'unicorn'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'twitter'
+
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
