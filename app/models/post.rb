@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base  
   attr_accessible :content, :subtitle, :title
 
-  before_create :create_slug
+  before_save :create_slug
   
   belongs_to :user
 
@@ -15,6 +15,6 @@ class Post < ActiveRecord::Base
   private
 
   def create_slug
-    self.slug = CGI::escape self.title
+    self.slug = CGI::escape self.title.gsub /[^A-Za-z\s]/, ''
   end
 end
