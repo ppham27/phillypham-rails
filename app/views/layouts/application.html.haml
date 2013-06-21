@@ -27,8 +27,9 @@
     = tag 'meta', property: "og:image", content: image_url("profile.jpg")
     = tag 'meta', property: 'og:site_name', content: "PhillyPham.com"
     = tag 'meta', property: 'og:url', content: root_url
+    = tag 'meta', property: 'og:title', content: "PhillyPham"
     = tag 'meta', property: 'og:type', content: "blog"
-    = tag 'meta', property: 'og:description', content: "Philip Pham's blog"
+    = tag 'meta', { property: 'og:description', content: "Philip Pham's blog" }, escape=false
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
 
