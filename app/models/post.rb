@@ -13,13 +13,13 @@ class Post < ActiveRecord::Base
   end
 
   include ActionView::Helpers::SanitizeHelper
-  def summarize(n = 300)    
-    self.subtitle + '...' + self.content
+  def summarize(n = 350)    
+    "#{self.subtitle}...#{self.content[0..n-1]}..."
   end
   
   private
 
   def create_slug
-    self.slug = CGI::escape self.title.gsub /[^A-Za-z\s]/, ''
+    self.slug = CGI::escape("#{Date.today.to_s}-#{self.title}".gsub(/[^0-9A-Za-z\-\s]/, ''))
   end
 end
