@@ -24,7 +24,7 @@ module ApplicationHelper
       url: request.url,
       title: "PhillyPham",
       type: "article",
-      description: "Philip Phamn's blog"}
+      description: "Philip Pham's blog"}
     og = default_og.merge og
     og[:description] = strip_tags(render(inline: og[:description]))
     display_meta_tags og: og
