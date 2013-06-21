@@ -23,6 +23,12 @@
   %head
     %title PhillyPham
     = csrf_meta_tag
+    %meta(charset="utf-8")
+    = tag 'meta', property: "og:image", content: image_url("profile.jpg")
+    = tag 'meta', property: 'og:site_name', content: "PhillyPham.com"
+    = tag 'meta', property: 'og:url', content: root_url
+    = tag 'meta', property: 'og:type', content: "blog"
+    = tag 'meta', property: 'og:description', content: "Philip Pham's blog"
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
 

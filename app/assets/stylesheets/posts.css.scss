@@ -5,6 +5,7 @@
 #blog-title {
   color: #355e3b;
   font-size: 24pt;
+  padding-bottom: 10px;
 }
 
 .post {
@@ -22,5 +23,9 @@
   .footer {
     font-size: 9pt;
     color: #355e3b;
+  }
+  
+  &:nth-of-type(1) {
+    padding-top: 0px;
   }
 }

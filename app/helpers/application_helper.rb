@@ -11,5 +11,9 @@ module ApplicationHelper
     options[:width] = options[:width] || '200'
     options[:send] = options[:send] || 'true'
     content_tag 'div', "", class: 'fb-like', data: options
-  end  
+  end
+
+  def image_url(source)
+    URI.join(root_url, image_path(source)).to_s
+  end
 end
