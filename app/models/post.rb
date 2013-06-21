@@ -13,8 +13,8 @@ class Post < ActiveRecord::Base
   end
 
   include ActionView::Helpers::SanitizeHelper
-  def summarize(n = 500)    
-    self.subtitle + '\n' + strip_tags(self.content)[0..n-1]
+  def summarize(n = 300)    
+    self.subtitle + '...' + strip_tags(self.content)[0..n-1]
   end
   
   private
