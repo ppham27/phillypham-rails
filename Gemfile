@@ -15,6 +15,7 @@ gem 'haml'
 gem 'haml-rails'
 
 gem 'twitter'
+gem 'meta-tags', require: 'meta_tags'
 
 group :development, :test do
   gem 'rspec'
