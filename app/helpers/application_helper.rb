@@ -10,9 +10,10 @@ module ApplicationHelper
     options[:layout] = options[:layout] || 'button_count'
     options[:width] = options[:width] || '200'
     options[:send] = options[:send] || 'true'
+    options[:'show-faces'] = options[:'show-faces'] || 'false'
     content_tag 'div', "", class: 'fb-like', data: options
   end
-
+  
   def image_url(source)
     URI.join(root_url, image_path(source)).to_s
   end
@@ -25,6 +26,7 @@ module ApplicationHelper
       type: "article",
       description: "Philip Phamn's blog"}
     og = default_og.merge og
+    og[:description] = strip_tags(render(inline: og[:description]))
     display_meta_tags og: og
   end
 end

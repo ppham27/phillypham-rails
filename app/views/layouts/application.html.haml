@@ -8,7 +8,7 @@
       %p Sometimes, I cook and lift. My current goals consist of learning more math, snatching enough weight to earn a man card, ridding myself of forever alone status, and growing a few inches.      
       %p I'm happy, free, confused, and lonely at the same time. It's miserable and magical, oh yeah.
   %p#sidebar-fb
-    = facebook_button
+    = facebook_button :'show-faces' => 'true'
     %br
     = link_to "Friend me on facebook", 'https://www.facebook.com/philip.pham2'
 
@@ -33,6 +33,7 @@
     = javascript_include_tag 'application'
 
   %body
+    #fb-root
     %h1#title PhillyPham.com
     %h2#subtitle ...Reminiscing on Rails
 

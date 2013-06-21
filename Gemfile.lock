@@ -28,6 +28,8 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    acts_as_singleton (0.0.8)
+      activerecord (>= 3.1.0)
     arel (3.0.2)
     authlogic (3.3.0)
       activerecord (>= 3.2)
@@ -147,6 +149,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_singleton
   authlogic
   bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.2.1)

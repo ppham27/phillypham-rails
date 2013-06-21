@@ -16,6 +16,7 @@ gem 'haml-rails'
 
 gem 'twitter'
 gem 'meta-tags', require: 'meta_tags'
+gem 'acts_as_singleton'
 
 group :development, :test do
   gem 'rspec'

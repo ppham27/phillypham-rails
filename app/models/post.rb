@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
 
   include ActionView::Helpers::SanitizeHelper
   def summarize(n = 300)    
-    self.subtitle + '...' + strip_tags(self.content)[0..n-1]
+    self.subtitle + '...' + self.content
   end
   
   private
